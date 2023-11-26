@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="normalize.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="style.css">
+        <title>Dots and Boxes Game!</title>
+    </head>
+    <body>
+    <!-- First div is the main -->
+        <main class="main-container">
+            <section class="game-container">
+            <!-- There will be to divs left and right  -->
+                <!-- Right div will contain all the dots and lines, each line will be invisible and each dot will be considered as <a> -->
+                
+
+                <div class="left">
+                    <h2 class="turn" style="display: none;"><span class="playerTurn">Player1</span> Turn</h2>
+                    <div class="players" style="display: none;">
+                        <div class="player1">
+                            <h3>Player1 <br> 
+                                <span class="score1">0</span>
+                            </h3>
+                        </div>
+                        <div class="player2">
+                            <h3 class="player2Inner">Player2 <br> 
+                                <span class="score2">0</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="middleLeft">
+                        <h1 class="winner"></h1>
+                    </div>
+                    <div class="bottomLeft" style="display: none;">
+                        <button class="resetBtn">Reset Game</button>
+                    </div>
+                </div>
+                <!-- Left div will contain player 1 and player 2 on the top, button to rsest game at the bottom -->
+                    <div class="form-container">
+                            <div class="startForm">
+                                <form action="">
+                                    <label class="labelText" for="list">Select player type</label><br>
+                                    <select id="list">
+                                        <option value="1">2 Players</option>
+                                        <option value="2">Computer</option>
+                                    </select><br>
+                                    <button type="submit" class="btn-start">Start</button>
+                                </form>
+                            </div>
+                        </div>
+                <div class="right" style="display: none;">
+                    <div class="gameBoard" >
+                        <div class="bullet" value="0"></div>
+                        <div class="bullet" value="1"></div>
+                        <div class="bullet" value="2"></div>
+                        <div class="bullet" value="3"></div>
+                        <div class="bullet" value="4"></div>
+                        <div class="bullet" value="5"></div>
+                        <div class="bullet" value="6"></div>
+                        <div class="bullet" value="7"></div>
+                        <div class="bullet" value="8"></div>
+                        <div class="bullet" value="9"></div>
+                        <div class="bullet" value="10"></div>
+                        <div class="bullet" value="11"></div>
+                        <div class="bullet" value="12"></div>
+                        <div class="bullet" value="13"></div>
+                        <div class="bullet" value="14"></div>
+                        <div class="bullet" value="15"></div>
+                        <div class="bullet" value="16"></div>
+                        <div class="bullet" value="17"></div>
+                        <div class="bullet" value="18"></div>
+                        <div class="bullet" value="19"></div>
+                        <div class="bullet" value="20"></div>
+                        <div class="bullet" value="21"></div>
+                        <div class="bullet" value="22"></div>
+                        <div class="bullet" value="23"></div>
+                        <div class="bullet" value="24"></div>
+
+
+                        <div class="squares1">
+                            <div class="square sq1" value="22"></div>
+                            <div class="square sq2"></div>
+                            <div class="square sq3"></div>
+                            <div class="square sq4"></div>
+                        </div>
+
+                        <div class="squares2">
+                            <div class="square sq5"></div>
+                            <div class="square sq6"></div>
+                            <div class="square sq7"></div>
+                            <div class="square sq8"></div>
+                        </div>
+
+                        <div class="squares3">
+                            <div class="square sq9"></div>
+                            <div class="square sq10"></div>
+                            <div class="square sq11"></div>
+                            <div class="square sq12"></div>
+                        </div>
+
+                        <div class="squares4">
+                            <div class="square sq13"></div>
+                            <div class="square sq14"></div>
+                            <div class="square sq15"></div>
+                            <div class="square sq16"></div>
+                        </div>
+
+                        <div class="verticalLine1">
+                            <div class="lineV line" value="0"></div>
+                            <div class="lineV line" value="1"></div>
+                            <div class="lineV line" value="2"></div>
+                            <div class="lineV line" value="3"></div>
+                            <div class="lineV line" value="4"></div>
+                        </div>
+
+                        <div class="verticalLine2">
+                            <div class="lineV line" value="5"></div>
+                            <div class="lineV line" value="6"></div>
+                            <div class="lineV line" value="7"></div>
+                            <div class="lineV line" value="8"></div>
+                            <div class="lineV line" value="9"></div>
+                        </div>
+
+                        <div class="verticalLine3">
+                            <div class="lineV line" value="10"></div>
+                            <div class="lineV line" value="11"></div>
+                            <div class="lineV line" value="12"></div>
+                            <div class="lineV line" value="13"></div>
+                            <div class="lineV line" value="14"></div>
+                        </div>
+
+                        <div class="verticalLine4">
+                            <div class="lineV line" value="15"></div>
+                            <div class="lineV line" value="16"></div>
+                            <div class="lineV line" value="17"></div>
+                            <div class="lineV line" value="18"></div>
+                            <div class="lineV line" value="19"></div>
+                        </div>
+
+                        <div class="horizontalLine1">
+                            <div class="lineH line" value="20"></div>
+                            <div class="lineH line" value="21"></div>
+                            <div class="lineH line" value="22"></div>
+                            <div class="lineH line" value="23"></div>
+                        </div>
+
+                        <div class="horizontalLine2">
+                            <div class="lineH line" value="24"></div>
+                            <div class="lineH line" value="25"></div>
+                            <div class="lineH line" value="26"></div>
+                            <div class="lineH line" value="27"></div>
+                        </div>
+
+
+                        <div class="horizontalLine3">
+                            <div class="lineH line" value="28"></div>
+                            <div class="lineH line" value="29"></div>
+                            <div class="lineH line" value="30"></div>
+                            <div class="lineH line" value="31"></div>
+                        </div>
+
+
+                        <div class="horizontalLine4">
+                            <div class="lineH line" value="32"></div>
+                            <div class="lineH line" value="33"></div>
+                            <div class="lineH line" value="34"></div>
+                            <div class="lineH line" value="35"></div>
+                        </div>
+
+                        <div class="horizontalLine5">
+                            <div class="lineH line" value="36"></div>
+                            <div class="lineH line" value="37"></div>
+                            <div class="lineH line" value="38"></div>
+                            <div class="lineH line" value="39"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+        <script src="script.js"></script>
+    </body> 
+</html>
